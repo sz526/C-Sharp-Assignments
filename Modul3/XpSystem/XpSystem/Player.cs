@@ -15,5 +15,11 @@ public class Player
     public void GainXp(int amount)
     {
         Xp += amount;
+    
+    while (Xp >= 100)
+        {
+            Level++;
+            Xp -= 100;
+        }
     }
 }

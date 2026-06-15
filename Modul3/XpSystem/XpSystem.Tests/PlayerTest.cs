@@ -40,4 +40,17 @@ public class PlayerTests
         Assert.Equal(2, player.Level);
         Assert.Equal(0, player.Xp);
     }
+    [Fact]
+    public void GainXp_HugeAmountOfXp_ShouldLevelUpMultipleTimes()
+    {
+        // Arrange
+        var player = new Player("Hero");
+
+        // Act
+        player.GainXp(250);
+
+        // Assert
+        Assert.Equal(3, player.Level);
+        Assert.Equal(50, player.Xp);
+    }
 }

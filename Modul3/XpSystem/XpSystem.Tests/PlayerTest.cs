@@ -1,10 +1,19 @@
-﻿namespace XpSystem.Tests;
+﻿using Xunit;
+using XpSystem;
 
-public class UnitTest1
+namespace XpSystem.Tests;
+
+public class PlayerTests
 {
     [Fact]
-    public void Test1()
+    public void NewPlayer_ShouldStartAtLevelOneAndZeroXp()
     {
+        // Arrange & Act
+        var player = new Player("Hero");
 
+        // Assert
+        Assert.Equal(1, player.Level);
+        Assert.Equal(0, player.Xp);
     }
+
 }

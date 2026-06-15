@@ -15,5 +15,16 @@ public class PlayerTests
         Assert.Equal(1, player.Level);
         Assert.Equal(0, player.Xp);
     }
+    [Fact]
+    public void GainXp_ShouldIncreaseXp()
+    {
+        // Arrange
+        var player = new Player("Hero");
 
+        // Act
+        player.GainXp(40);
+
+        // Assert
+        Assert.Equal(40, player.Xp);
+    } 
 }

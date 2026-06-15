@@ -12,5 +12,8 @@ public class Player
         Level = 1;
         Xp = 0;
     }
-
+    public void GainXp(int amount)
+    {
+        Xp += amount;
+    }
 }
